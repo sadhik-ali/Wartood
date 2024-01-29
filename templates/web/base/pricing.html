@@ -1,0 +1,109 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- breadcrumb area -->
+    <div class="breadcrumb-area breadcrumb-padding bg-img" style="background-image:url({% static 'web/images/bg/bg-2.jpg' %})">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2>Pricing Table</h2>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Pricing Table</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Project area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 row-cols-1 mb-n6">
+                <div class="col mb-6">
+                    <div class="pricing-table-wrap">
+                        <div class="pricing-image">
+                            <img src="{% static 'web/images/banner/banner-7.jpg' %}" alt="">
+                        </div>
+                        <div class="pricing-head">
+                            <h4 class="pricing-title">Standard Plan</h4>
+                            <div class="pricing-price">
+                                <span class="pricing-price-currency">$</span>
+                                <span class="pricing-price-amount">29</span>
+                                <span class="pricing-price-duration">/Month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul>
+                                <li>Master Bedroom</li>
+                                <li>Standard: Living Area </li>
+                                <li>Kid’s bedroom </li>
+                                <li>Master Bedroom</li>
+                                <li>Ceiling and lighting </li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="{% url 'contact' %}" class="btn btn-primary btn-hover-dark padding-dec">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-6">
+                    <div class="pricing-table-wrap">
+                        <div class="pricing-image">
+                            <img src="{% static 'web/images/banner/banner-8.jpg' %}" alt="">
+                        </div>
+                        <div class="pricing-head">
+                            <span class="pricing-badge">popular</span>
+                            <h4 class="pricing-title">Professional Plan</h4>
+                            <div class="pricing-price">
+                                <span class="pricing-price-currency">$</span>
+                                <span class="pricing-price-amount">45</span>
+                                <span class="pricing-price-duration">/Month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul>
+                                <li>Master Bedroom</li>
+                                <li>Standard: Living Area </li>
+                                <li>Kid’s bedroom </li>
+                                <li>Master Bedroom</li>
+                                <li>Ceiling and lighting </li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="{% url 'contact' %}" class="btn btn-primary btn-hover-dark padding-dec">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-6">
+                    <div class="pricing-table-wrap">
+                        <div class="pricing-image">
+                            <img src="{% static 'web/images/banner/banner-9.jpg' %}" alt="">
+                        </div>
+                        <div class="pricing-head">
+                            <h4 class="pricing-title">Ultimate Plan</h4>
+                            <div class="pricing-price">
+                                <span class="pricing-price-currency">$</span>
+                                <span class="pricing-price-amount">50</span>
+                                <span class="pricing-price-duration">/Month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul>
+                                <li>Master Bedroom</li>
+                                <li>Standard: Living Area </li>
+                                <li>Kid’s bedroom </li>
+                                <li>Master Bedroom</li>
+                                <li>Ceiling and lighting </li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <a href="{% url 'contact' %}" class="btn btn-primary btn-hover-dark padding-dec">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  {% endblock %}

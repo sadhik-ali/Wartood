@@ -1,0 +1,104 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- breadcrumb area -->
+    <div class="breadcrumb-area breadcrumb-padding bg-img" style="background-image:url({% static 'web/images/bg/bg-2.jpg' %})">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2>Our Projects</h2>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Projects Carousel</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Project area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="section-title text-center mb-lg-9 mb-md-7 mb-5">
+                <h2 class="title">Project <span> Carousel</span></h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+            </div>
+        </div>
+        <div class="project-slider-active swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="img-zoom" href="{% static 'web/images/project/project-10.jpg' %}"><i class="dlicon arrows-1_zoom-88"></i></a>
+                            <a class="thumbnail" href="{% url 'projectdetails' %}">
+                                <img src="{% static 'web/images/project/project-10.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a href="#">Building</a></span>
+                                <h3 class="title"><a href="{% url 'projectdetails' %}">Living Room Remodeling</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="img-zoom" href="{% static 'web/images/project/project-11.jpg' %}"><i class="dlicon arrows-1_zoom-88"></i></a>
+                            <a class="thumbnail" href="{% url 'projectdetails' %}">
+                                <img src="{% static 'web/images/project/project-11.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a href="#">Interior</a></span>
+                                <h3 class="title"><a href="{% url 'projectdetails' %}">Window Glass Replacement</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="img-zoom" href="{% static 'web/images/project/project-12.jpg' %}"><i class="dlicon arrows-1_zoom-88"></i></a>
+                            <a class="thumbnail" href="{% url 'projectdetails' %}">
+                                <img src="{% static 'web/images/project/project-12.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a href="#">Architecture</a></span>
+                                <h3 class="title"><a href="{% url 'projectdetails' %}">Restaurant Interior Design</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="img-zoom" href="{% static 'web/images/project/project-13.jpg' %}"><i class="dlicon arrows-1_zoom-88"></i></a>
+                            <a class="thumbnail" href="{% url 'projectdetails' %}">
+                                <img src="{% static 'web/images/project/project-13.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a href="#">Building</a></span>
+                                <h3 class="title"><a href="{% url 'projectdetails' %}">Wall Mural Painting</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="img-zoom" href="{% static 'web/images/project/project-11.jpg' %}"><i class="dlicon arrows-1_zoom-88"></i></a>
+                            <a class="thumbnail" href="{% url 'projectdetails' %}">
+                                <img src="{% static 'web/images/project/project-11.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a href="#">Architecture</a></span>
+                                <h3 class="title"><a href="{% url 'projectdetails' %}"> Living Room Interior Design</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-slider-prev project-slider-nav"><i class="fa fa-angle-left"></i> PREV</div>
+            <div class="project-slider-next project-slider-nav">NEXT <i class="fa fa-angle-right"></i></div>
+        </div>
+    </div>
+
+    {% endblock %}

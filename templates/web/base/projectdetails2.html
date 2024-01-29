@@ -1,0 +1,71 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- breadcrumb area -->
+    <div class="breadcrumb-area breadcrumb-padding bg-img" style="background-image:url({% static 'web/images/bg/bg-2.jpg' %})">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2>Project Details</h2>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Project Details 2</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Project area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row row-cols-lg-2 row-cols-md-2 row-cols-1">
+                <div class="col">
+                    <div class="project-details-img-wrap">
+                        <div class="project-details-img mb-6">
+                            <img src="{% static 'web/images/project/project-details-6.jpg' %}" alt="Project Image">
+                        </div>
+                        <div class="project-details-img mb-6">
+                            <img src="{% static 'web/images/project/project-details-5.jpg' %}" alt="Project Image">
+                        </div>
+                        <div class="project-details-img mb-6">
+                            <img src="{% static 'web/images/project/project-details-7.jpg' %}" alt="Project Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="col sidebar-active">
+                    <div class="project-wrapper-sticky">
+                        <div class="project-details-content mb-5 mb-md-8">
+                            <span class="category">Interior</span>
+                            <h1 class="title">Living Room Interior Design</h1>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="project-details-list-content">
+                                <ul>
+                                    <li>- Vivamus eget ante id velit varius lacinia.</li>
+                                    <li>- Fusce risus ligula, semper et ultricies vitae.</li>
+                                    <li>- It was popularised in the 1960s with the releas.</li>
+                                </ul>
+                            </div>
+                            <p>There are many variations of passages of Lorem Ipsum available, but majority have suffered alteration in some form, by injected humour, or randomised words which don't going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                        </div>
+                        <div class="project-details-info modify">
+                            <ul>
+                                <li><span>Name: </span>Client Name</li>
+                                <li><span>Email: </span>info@example.com</li>
+                                <li><span>Release: </span>April 2021</li>
+                                <li><span>URL: </span><a href="#">https://www.pace.com</a></li>
+                                <li><span>Address: </span>London Donec eleifend 96502</li>
+                            </ul>
+                        </div>
+                        <div class="social-icon-style mb-5">
+                            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a class="behance" href="#"><i class="fa fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   {% endblock %}

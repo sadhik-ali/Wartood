@@ -1,0 +1,65 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+<div class="breadcrumb-content text-center">
+    <!-- breadcrumb area -->
+    <div class="breadcrumb-area breadcrumb-padding bg-img"
+        style="background-image:url({% static 'web/images/bg/bg-2.jpg' %})">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2>Our Services</h2>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Services</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Project area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6">
+                {% for s in enquiry %}
+                <div class="col mb-6">
+                    <a href="{% url 'servicedetails' id=s.id %}">
+                        <div class="service text-center">
+                            <img src="{{s.image.url}}" alt="Image">
+                            <div class="service-content-wrap">
+                                <div class="service-content">
+                                    <div class="service-icon">
+                                        <i class="{{s.icon}}"></i>
+                                    </div>
+                                    <h3 class="title"><a href="{% url 'servicedetails' id=s.id %}">{{s.title}}</a></h3>
+                                    <a href="{% url 'servicedetails' id=s.id %}">
+                                        <p>{{s.paragraph}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+                <div class="col mb-6">
+                    <a href="{% url 'stone' %}">
+                        <div class="service text-center ms-3">
+                            <img src="{% static 'web/images/stone.jpeg' %}" alt="Image">
+                            <div class="service-content-wrap">
+                                <div class="f ms-4 mb-4">
+                                    <div class="service-content ms-5">
+                                        <div class="service-icon ms-5">
+                                            <i class="dlicon tech-2_firewall"></i>
+                                        </div>
+                                        <h3 class="title ms-5"><a href="{% url 'stone' %}">Stone Works</a></h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

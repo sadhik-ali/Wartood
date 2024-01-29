@@ -1,0 +1,189 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- breadcrumb area -->
+    <div class="breadcrumb-area breadcrumb-padding bg-img" style="background-image:url({% static 'web/images/bg/bg-2.jpg' %})">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2>Our Blog</h2>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Blog Left Sidebar</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Project area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-9">
+                    <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-2 row-cols-1">
+                        <div class="col mb-6">
+                            <div class="blog-wrap">
+                                <div class="blog-img mb-2">
+                                    <a href="{% url 'blogdetails' %}"><img src="{% static 'web/images/blog/blog-1.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li>January 3, 2021 /</li>
+                                            <li><a href="#">Interior</a></li>
+                                        </ul>
+                                    </div>
+                                    <h3><a href="{% url 'blogdetails' %}">This blog provides interior design tips.</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-6">
+                            <div class="blog-wrap">
+                                <div class="blog-img mb-2">
+                                    <a href="{% url 'blogdetails' %}"><img src="{% static 'web/images/blog/blog-2.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li>February 7, 2021 /</li>
+                                            <li><a href="#">Building </a></li>
+                                        </ul>
+                                    </div>
+                                    <h3><a href="{% url 'blogdetails' %}"> Focussed on designing new homes.</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-6">
+                            <div class="blog-wrap">
+                                <div class="blog-img mb-2">
+                                    <a href="{% url 'blogdetails' %}"><img src="{% static 'web/images/blog/blog-3.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li>September 5, 2021 /</li>
+                                            <li><a href="#">Architecture</a></li>
+                                        </ul>
+                                    </div>
+                                    <h3><a href="{% url 'blogdetails' %}">Suggest way to decoration work place.</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-6">
+                            <div class="blog-wrap">
+                                <div class="blog-img mb-2">
+                                    <a href="{% url 'blogdetails' %}"><img src="{% static 'web/images/blog/blog-4.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li>January 3, 2021 /</li>
+                                            <li><a href="#">Interior</a></li>
+                                        </ul>
+                                    </div>
+                                    <h3><a href="{% url 'blogdetails' %}">Advantage Interior Design</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-6">
+                            <div class="blog-wrap">
+                                <div class="blog-img mb-2">
+                                    <a href="{% url 'blogdetails' %}"><img src="{% static 'web/images/blog/blog-5.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li>February 7, 2021 /</li>
+                                            <li><a href="#">Building </a></li>
+                                        </ul>
+                                    </div>
+                                    <h3><a href="{% url 'blogdetails' %}">The Collective Interior Design</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-6">
+                            <div class="blog-wrap">
+                                <div class="blog-img mb-2">
+                                    <a href="{% url 'blogdetails' %}"><img src="{% static 'web/images/blog/blog-9.jpg' %}" alt=""></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li>September 5, 2021 /</li>
+                                            <li><a href="#">Architecture</a></li>
+                                        </ul>
+                                    </div>
+                                    <h3><a href="{% url 'blogdetails' %}">Interior Decor Ideas.</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination-style mt-3">
+                        <ul>
+                            <li><a class="active" href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a class="next" href="#"><i class="fa fa-angle-double-right "></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="sidebar-wrap sidebar-margin-right">
+                        <div class="sidebar-widget search-wrap-2 mb-md-10 mb-7">
+                            <form action="#">
+                                <input placeholder="Search" type="text">
+                                <button class="button-search-2"><i class="dlicon ui-1_zoom"></i></button>
+                            </form>
+                        </div>
+                        <div class="sidebar-widget mb-10">
+                            <h3 class="sidebar-widget-title">Recent Post </h3>
+                            <div class="sidebar-blog-wrap">
+                                <div class="single-sidebar-blog">
+                                    <div class="sidebar-blog-img">
+                                        <a href="{% url 'blogdetails' %}"><img src="{% static 'web/images/blog/sidebar-2.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="sidebar-blog-content">
+                                        <span class="category"><a href="#">Architecture</a></span>
+                                        <h4 class="title"><a href="{% url 'blogdetails' %}">Architecture Design</a></h4>
+                                    </div>
+                                </div>
+                                <div class="single-sidebar-blog">
+                                    <div class="sidebar-blog-img">
+                                        <a href="{% url 'blogdetails' %}"><img src="{% static 'web/images/blog/sidebar-1.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="sidebar-blog-content">
+                                        <span class="category"><a href="#">Interior</a></span>
+                                        <h4 class="title"><a href="{% url 'blogdetails' %}">Home Interior Design</a></h4>
+                                    </div>
+                                </div>
+                                <div class="single-sidebar-blog">
+                                    <div class="sidebar-blog-img">
+                                        <a href="{% url 'blogdetails' %}"><img src="{% static 'web/images/blog/sidebar-3.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="sidebar-blog-content">
+                                        <span class="category"><a href="#">Branding</a></span>
+                                        <h4 class="title"><a href="{% url 'blogdetails' %}">Office Interior Design</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-widget">
+                            <h3 class="sidebar-widget-title">Categories </h3>
+                            <div class="sidebar-categori">
+                                <ul>
+                                    <li><a href="#">Interior <span>(09)</span></a></li>
+                                    <li><a href="#">Branding <span>(16)</span></a></li>
+                                    <li><a href="#">Interior <span>(10)</span></a></li>
+                                    <li><a href="#">Industrial <span>(07)</span></a></li>
+                                    <li><a href="#">Construction <span>(18)</span></a></li>
+                                    <li><a href="#">Architecture <span>(20)</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

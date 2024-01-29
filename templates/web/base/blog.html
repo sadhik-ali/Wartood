@@ -1,0 +1,50 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- breadcrumb area -->
+    <div class="breadcrumb-area breadcrumb-padding bg-img" style="background-image:url({% static 'web/images/bg/bg-2.jpg' %})">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2>Our Blogs</h2>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6">
+            {% for blog in post %}
+                <div class="col mb-6">
+                    <div class="blog-wrap">
+                        <div class="blog-img mb-2">
+                            <a href="{% url 'blogdetails' %}"><img src="{{blog.image.url}}" alt=""></a>
+                        </div>
+                        <div class="blogcontent">
+                            <div class="blog-meta " >
+                                <ul class="d-flex blog-df">
+                                    <li>{{blog.date}} /</li>
+                                    <li><a href="#">{{blog.category}}</a></li>
+                                </ul>
+                            </div>
+                            <h3><a href="{% url 'blogdetails' %}">{{blog.title}}</a></h3>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}                        
+                </div>
+                <div class="pagination-style mt-lg-9 mt-md-7 mt-5">
+                </div> 
+               </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+    

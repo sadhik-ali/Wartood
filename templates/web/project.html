@@ -1,0 +1,156 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- breadcrumb area -->
+<div class="breadcrumb-area breadcrumb-padding bg-img"
+    style="background-image:url({% static 'web/images/bg/bg-2.jpg' %})">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <h2>Our Projects</h2>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><i class="fa fa-angle-right"></i></li>
+                <li>Projects</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Project area -->
+<div class="section section-padding">
+    <div class="container">
+        <div class="project-menu-style project-menu-active isotope-btn-add-active mb-6">
+            <button class="active btn-project" data-filter="*">All</button>
+            {% for category in category %}
+            <button class="btn-project" data-filter=".{{category.name}}">{{category.name}}</button>
+            {% endfor %}
+
+            <!-- <button class="btn-project" data-filter=".cat2">Architecture</button>
+                <button class="btn-project" data-filter=".cat3">Design</button>
+                <button class="btn-project" data-filter=".cat4">Building</button> -->
+        </div>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6 grid">
+            {% for project in projects %}
+            <div class="col mb-6 grid-item {{project.category.name}}">
+                <div class="project-wrap">
+                    <div class="project-inner">
+                        <a class="thumbnail">
+                            <img src="{{project.image.url}}" alt="Blog Image">
+                        </a>
+                        <div class="project-content">
+                            <span class="category"><a>{{project.category}}</a></span>
+                            <h3 class="title"><a>{{project.title}}</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- <div class="col mb-6 grid-item cat1">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="thumbnail">
+                                <img src="{% static 'web/images/project/project-2.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a>Interior</a></span>
+                                <h3 class="title"><a>Coffee & Restaurant Interior Design</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-6 grid-item cat4">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="thumbnail">
+                                <img src="{% static 'web/images/project/project-3.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a>Architecture</a></span>
+                                <h3 class="title"><a>Bedroom Remodeling </a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-6 grid-item cat3 cat1">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="thumbnail">
+                                <img src="{% static 'web/images/project/project-4.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a>Building</a></span>
+                                <h3 class="title"><a>Window Glass Replacement</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-6 grid-item cat1 cat3">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="thumbnail">
+                                <img src="{% static 'web/images/project/project-5.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a>Architecture</a></span>
+                                <h3 class="title"><a>Bathroom Redesign</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-6 grid-item cat2 cat4">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="thumbnail">
+                                <img src="{% static 'web/images/project/project-7.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a>Interior</a></span>
+                                <h3 class="title"><a>Living Room Remodeling</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-6 grid-item cat4">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="thumbnail">
+                                <img src="{% static 'web/images/project/project-6.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a>Interior</a></span>
+                                <h3 class="title"><a>Office Room Interior Design</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-6 grid-item cat2 cat4">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="thumbnail">
+                                <img src="{% static 'web/images/project/project-8.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a>Building</a></span>
+                                <h3 class="title"><a>Hardwood Flooring Installation</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-6 grid-item cat1">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="thumbnail">
+                                <img src="{% static 'web/images/project/project-9.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a>Interior</a></span>
+                                <h3 class="title"><a>Restaurant Interior Design</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+        </div>
+    </div>
+</div>
+
+{% endblock %}

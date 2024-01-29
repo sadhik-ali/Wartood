@@ -1,0 +1,97 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- breadcrumb area -->
+<div class="breadcrumb-area breadcrumb-padding bg-img"
+    style="background-image:url({% static 'web/images/bg/bg-2.jpg' %})">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <h2>Contact Us</h2>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><i class="fa fa-angle-right"></i></li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Project area -->
+<div class="section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6">
+                <div class="contact-info-wrap">
+                    <div class="single-contact-info-wrap">
+                        <div class="info-icon">
+                            <i class="dlicon ui-1_home-51"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3 class="title">Branches</h3>
+                            <p class="width">Manjeri, Perintalmanna, Malappuram</p>
+                        </div>
+                    </div>
+                    <div class="single-contact-info-wrap">
+                        <div class="info-icon">
+                            <i class="dlicon health_pulse-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <a href="tel:+91 8086 111 003">
+                                <h3 class="title">Phone</h3>
+                                <p> Mobile: <span>(+91) 8086 111 003</span></p>
+                            </a>
+                            <!-- <p> Hotline: <span>(+91) 8086 111 003</span></p> -->
+                        </div>
+                    </div>
+                    <div class="single-contact-info-wrap">
+                        <div class="info-icon">
+                            <i class="dlicon ui-1_email-85"></i>
+                        </div>
+                        <div class="info-content">
+                            <a href="mailto:wartood@gmail.com">
+                                <h3 class="title">Email</h3>
+                                <p>wartood@gmail.com</p>
+                            </a>
+                            <!-- <p>www.wartood.com</p> -->
+                        </div>
+                    </div>
+                    <div class="single-contact-info-wrap">
+                        <div class="info-icon">
+                            <i class="dlicon ui-2_share"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3 class="title">Follow us</h3>
+                            <div class="social-icon-style mt-4">
+                                <a class="facebook" target="_blank" href="https://www.facebook.com/wartood"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a class="twitter" target="_blank" href="https://www.instagram.com/_wartood_/"><i
+                                        class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+            <div class="col-lg-7 col-md-6">
+                <div class="contact-from-wrap">
+                    <form id="contactForm" action="{% url 'contact' %}" method="POST">
+                        {% csrf_token %}
+                        <input name="name" type="text" placeholder="Name" required>
+
+                        <input name="email" type="email" placeholder="Email" required>
+
+                        <input name="subject" type="text" placeholder="Subject" required>
+
+                        <textarea name="message" placeholder="Your message" required></textarea>
+
+                        <input class="submit" type="submit" value="send message">
+                    </form>
+                    <p class="form-messege">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

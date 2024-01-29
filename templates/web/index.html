@@ -1,0 +1,332 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Hero area -->
+    <div class="hero-area overly-style-1 opacity-point-4">
+     
+        <video src="{% static 'web/video/phone.mp4' %}" autoplay loop muted class="d-block d-sm-none"></video>
+        <video src="{% static 'web/video/webvideo.mp4' %}" autoplay loop muted class="d-none d-sm-block"></video>
+        <center>
+        <div class="hero-content-1 hero-content-position">
+     
+            <h1 class="title" data-aos="fade-up" data-aos-delay="200">WARTOOD </h1>
+            {% comment %} INTERIOR DESIGN {% endcomment %}
+            <p id="pbnr" data-aos="fade-up" data-aos-delay="300">  Interior and Exterior <br> Wartood Interior Elegance: Crafting Inspired Spaces for Life  </p>
+            {% comment %} <p data-aos="fade-up" data-aos-delay="300">Wartood Interior Elegance: Crafting Inspired Spaces for Life </p> {% endcomment %}
+            <a href="{% url 'project' %}" class="btn btn-primary btn-hover-dark" data-aos="fade-up" data-aos-delay="400">VIEW PROJECT</a>
+        </div>
+    </center>
+    </div>
+    <!-- About area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row row-cols-lg-2 row-cols-1 mb-n6">
+                <div class="col align-self-center mb-6">
+                    <div class="about-content">
+                        <h2 class="title">Welcome to <span>Wartood</span></h2>
+                        <p>We are passionate, knowing that people live, work, play and inhabit the spaces and places we imagine and envision for our clients. To those wanting to make an impact with interior design.</p>
+                    </div>
+                    <div class="working-away-wrap">
+                        <div class="working-away">
+                            <div class="working-away-icon">
+                                <i class="dlicon design_measure-big"></i>
+                            </div>
+                            <div class="working-content">
+                                <h3 class="title">Qualified Planning</h3>
+                                <p>Experience the art of qualified planning as we meticulously shape spaces to fulfill their true potential.</p>
+                            </div>
+                        </div>
+                        <div class="working-away">
+                            <div class="working-away-icon">
+                                 <i class="dlicon ui-1_home-51"></i>
+                            </div>
+                            <div class="working-content">
+                                <h3 class="title">Professional Design</h3>
+                                <p>Unlock the potential of your space with our professional design services that blend innovation and elegance seamlessly.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{% url 'about' %}" class="btn btn-primary btn-hover-dark">LEARN MORE</a>
+                </div>
+                <div class="col mb-6">
+                    <div class="about-banner">
+                        <img src="{% static 'web/images/banner/banner-2.png' %}" alt="banner">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Funfact area -->
+    <div class="section section-padding bg-img overly-style-1 opacity-point-7" style="background-image:url({% static 'web/images/bg/bg-1.jpg' %})">
+        <div class="container">
+            <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6">
+                <div class="col mb-8">
+                    <div class="funfact-2 text-center">
+                        <i class="dlicon travel_bag"></i>
+                        <span class="odometer count-style-2" data-count-to="594"></span>
+                        <h4 class="title">Projects Worked</h4>
+                    </div>
+                </div>
+                <div class="col mb-8">
+                    <div class="funfact-2 text-center">
+                        <i class="dlicon users_man-23"></i>
+                        <span class="odometer count-style-2" data-count-to="20"></span>
+                        <h4 class="title">Expert Workers</h4>
+                    </div>
+                </div>
+                <div class="col mb-8">
+                    <div class="funfact-2 text-center">
+                        <i class="dlicon emoticons_smile"></i>
+                        <span class="odometer count-style-2" data-count-to="594"></span>
+                        <h4 class="title">Happy Clients</h4>
+                    </div>
+                </div>
+                <div class="col mb-8">
+                    <div class="funfact-2 text-center">
+                        <i class="dlicon tech-2_firewall"></i>
+                        <span class="odometer count-style-2" data-count-to="5"></span>
+                        <h4 class="title">Upcomming Project</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="section-title text-center mb-lg-9 mb-md-7 mb-5">
+                <h2 class="title">Our <span>Services</span></h2>
+                <p>Discover the art of transformation through interior design. creating harmony and functionality that resonate with your lifestyle.</p>
+            </div>
+            <div class="row mb-n6">
+                <div class="col-lg-5 col-md-5 mb-6">
+                    <div class="service-img">
+                        <img src="{% static 'web/images/banner/banner-6.jpg' %}" alt="banner">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7 align-self-center mb-6">
+                    <div class="service-2">
+                        <div class="service-content-wrap-2">
+                            <div class="service-icon-2">
+                                <i class="dlicon design_compass"></i>
+                            </div>
+                            <div class="service-content-2">
+                                <!-- <h3 class="title"><a href="{% url 'service' %}">Interior Design</a></h3> -->
+                                <h3 class="title"><a href="{% url 'service' %}">Gypsum Ceiling</a></h3>
+                                <!-- <p>Explore Stunning Designs, Expert Services, and Creativity Redefined. Your Dream Space Starts Here.</p> -->
+                                <p>Elevate your space with stunning Gypsum Ceiling solutions.</p>
+                            </div>
+                        </div>
+                        <div class="service-content-wrap-2">
+                            <div class="service-icon-2">
+                                <i class="dlicon furniture_light"></i>
+                            </div>
+                            <div class="service-content-2">
+                                <!-- <h3 class="title"><a href="{% url 'service' %}">Carpet Installation </a></h3> -->
+                                <h3 class="title"><a href="{% url 'service' %}">Play Wood Works</a></h3>
+                                <!-- <p>Transform your space with expert carpet installation that combines comfort and style for a seamless interior upgrade.</p> -->
+                                <p>Discover the artistry of Play Wood Works - where creativity meets craftsmanship in every wooden masterpiece.</p>
+                            </div>
+                        </div>
+                        <div class="service-content-wrap-2">
+                            <div class="service-icon-2">
+                                <i class="dlicon design_design"></i>
+                            </div>
+                            <div class="service-content-2">
+                                <!-- <h3 class="title"><a href="{% url 'service' %}">Wall Mural Painting</a></h3> -->
+                                <h3 class="title"><a href="{% url 'service' %}">Particle Board Furniture</a></h3>
+                                <!-- <p>Elevate your surroundings through captivating wall mural paintings that infuse artistic expression into every corner of your space.</p> -->
+                                <p>Elevate your home with Particle Board Furniture: Affordable, Stylish, and Durable.</p>
+                            </div>
+                        </div>
+                        <div class="service-content-wrap-2">
+                            <div class="service-icon-2">
+                                <i class="dlicon furniture_mixer"></i>
+                            </div>
+                            <div class="service-content-2">
+                                <!-- <h3 class="title"><a href="{% url 'service' %}">Window Glass Replacement</a></h3> -->
+                                <h3 class="title"><a href="{% url 'stone' %}">Stone Works</a></h3>
+                                <!-- <p>Experience clarity and efficiency with our professional window glass replacement services, enhancing both aesthetics and functionality in your space.</p> -->
+                                <p>Transforming spaces with the enduring beauty of Stone Works.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project area -->
+    <div class="section section-padding pt-0">
+        <div class="container">
+            <div class="section-title text-center mb-lg-9 mb-md-7 mb-5">
+                <h2 class="title">Our <span> Projects</span></h2>
+                <p>Explore our curated collection of stunning interior design images showcasing our finest projects and creative expertise.</p>
+            </div>
+        </div>
+        <div class="project-slider-active swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="img-zoom" href="{% static 'web/images/project/project-15.jpg' %}"><i class="dlicon arrows-1_zoom-88"></i></a>
+                            <a class="thumbnail" href="{% url 'project' %}">
+                                <img src="{% static 'web/images/project/project-15.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a href="#">Building</a></span>
+                                <h3 class="title"><a href="{% url 'project' %}">Living Room Remodeling</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="img-zoom" href="{% static 'web/images/project/project-11.jpg' %}"><i class="dlicon arrows-1_zoom-88"></i></a>
+                            <a class="thumbnail" href="{% url 'project' %}">
+                                <img src="{% static 'web/images/project/project-12.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a href="#">Architecture</a></span>
+                                <h3 class="title"><a href="{% url 'project' %}">Restaurant Interior Design</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="img-zoom" href="{% static 'web/images/project/project-12.jpg' %}"><i class="dlicon arrows-1_zoom-88"></i></a>
+                            <a class="thumbnail" href="{% url 'project' %}">
+                                <img src="{% static 'web/images/project/project-11.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a href="#">Interior</a></span>
+                                <h3 class="title"><a href="{% url 'project' %}">Window Glass Replacement</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="img-zoom" href="{% static 'web/images/project/project-13.jpg' %}"><i class="dlicon arrows-1_zoom-88"></i></a>
+                            <a class="thumbnail" href="{% url 'project' %}">
+                                <img src="{% static 'web/images/project/project-13.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a href="#">Building</a></span>
+                                <h3 class="title"><a href="{% url 'project' %}">Wall Mural Painting </a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project-wrap">
+                        <div class="project-inner">
+                            <a class="img-zoom" href="{% static 'web/images/project/project-16.jpg' %}"><i class="dlicon arrows-1_zoom-88"></i></a>
+                            <a class="thumbnail" href="{% url 'project' %}">
+                                <img src="{% static 'web/images/project/project-16.jpg' %}" alt="Blog Image">
+                            </a>
+                            <div class="project-content">
+                                <span class="category"><a href="#">Interior</a></span>
+                                <h3 class="title"><a href="{% url 'project' %}">Living Room Interior Design</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-slider-prev project-slider-nav"><i class="fa fa-angle-left"></i> PREV</div>
+            <div class="project-slider-next project-slider-nav">NEXT <i class="fa fa-angle-right"></i></div>
+        </div>
+    </div>
+    <!-- Design Conversion area -->
+    <div class="section section-padding pt-0">
+        <div class="container">
+            <div class="section-title text-center mb-lg-9 mb-md-7 mb-5">
+                <h2 class="title">Interior Design <span> Conversion</span></h2>
+                <p>Watch your vision come to life with our interior design conversion expertise, where ideas evolve into captivating realities.</p>
+            </div>
+            {% for img in before_after %}
+            <div id="beforeandafteractive" class="beforeandafter image-width-height beforeandafter-style">
+                <div class="before1">
+                    <img src="{{img.before_image.url}}" alt="Images">
+                    <span class="caption">BEFORE</span>
+                </div>
+                <div class="after1">
+                    <img src="{{img.after_image.url}}" alt="Images">
+                    <span class="caption">AFTER</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Testimonial area -->
+    <div class="section bg-img over-style-2 opacity-point-7">
+        <div class="container">
+            <div class="section-title-2 text-center mb-lg-9 mb-md-7 mb-5">
+                <h2 class="here white">WHAT <span> CLIENTS</span> SAY?</h2>
+                <p class="add">Wartood's team balanced style and functionality perfectly in our home redesign. They're the go-to for anyone who wants a stunning yet practical living space.</p>
+            </div>
+            
+            <div class="testimonial-active swiper">
+                <div class="swiper-wrapper">
+                    {% for test in testimonial %}
+                    <div class="swiper-slide">
+                        <div class="single-testimonial-wrapper">
+                            <div class="testimonial-img-title">
+                                <div class="testimonial-img">
+                                    <img src="{{test.image.url}}"style="border-radius:50px;" alt="">
+                                </div>
+                                <div class="testimonial-title">
+                                    <h4>{{test.name}}</h4>
+                                    <!-- <span> Customer Relations Manager</span> -->
+                                </div>
+                            </div>
+                            <p> "{{test.content}}"</p>
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog area -->
+    <div class="section section-padding mb-5">
+        <div class="container">
+            <div class="section-title text-center mb-lg-9 mb-md-7 mb-5">
+                <h2 class="title">Latest <span> News</span></h2>
+                <p>Stay in the loop with our latest news, where we share insights, trends, and inspirations shaping the world of interior design.</p>
+            </div>
+            <div class="blog-active swiper">
+                <div class="swiper-wrapper">
+                    {% for update in updates %}
+                    <div class="swiper-slide">
+                        <div class="blog-wrap">
+                            <div class="blog-img mb-2">
+                                <a href="{% url 'blogdetails' update.id %}"><img src="{{update.image.url}}" alt=""></a>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <ul>
+                                        <li>{{update.date}} /</li>
+                                        <li><a href="#">{{update.service}}</a></li>
+                                    </ul>
+                                </div>
+                                <h3><a href="{% url 'blogdetails' update.id %}">{{update.title}}</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   {% endblock %}

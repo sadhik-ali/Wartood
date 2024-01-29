@@ -1,0 +1,138 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- breadcrumb area -->
+<div class="breadcrumb-area breadcrumb-padding bg-img"
+    style="background-image:url({% static 'web/images/bg/bg-2.jpg' %})">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <h2>Our Stones</h2>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><i class="fa fa-angle-right"></i></li>
+                <li>Stones</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<div class="tandur">
+    <div class="container">
+        <div class="about-content">
+            <h2 class="title text-center">Tandur <span>Stone</span></h2>
+        </div>
+        <br>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for tandur in tandurs %}
+            <div class="col">
+                <div class="card">
+                    <img src="{{tandur.image.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{tandur.name}}</h5>
+                        <p class="card-text">{{tandur.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="kadappa">
+    <div class="container">
+        <div class="about-content">
+            <h2 class="title text-center">Kadappa <span>Stone</span></h2>
+        </div>
+        <br>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for kadappa in kadappas %}
+            <div class="col">
+                <div class="card">
+                    <img src="{{kadappa.image.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{kadappa.name}}</h5>
+                        <p class="card-text">{{kadappa.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="bangalore">
+    <div class="container">
+        <div class="about-content">
+            <h2 class="title text-center">Bangalore <span>Stone</span></h2>
+        </div>
+        <br>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for bangalore in bangalores %}
+            <div class="col">
+                <div class="card">
+                    <img src="{{bangalore.image.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{bangalore.name}}</h5>
+                        <p class="card-text">{{bangalore.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<br>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div class="enquiry">
+    <div class="container">
+        <div class="blog-comment-form-wrap">
+            <h2 class="title">Interior Form Enquiry</h2><br>
+            <div class="blog-comment-form">
+                <form id="commentForm" href="{{ whatsapp_url }}" target="_blank" action="" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="blog-comment-style">
+                            <input class="fw-bold" type="text" placeholder="Stone Works" value=""
+                                style="background: #f5f5f5;" readonly="" id="Product" name="Product"
+                                fdprocessedid="81053c">
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="blog-comment-style">
+                                <input type="text" class="border-2" placeholder="Name" name="Name" id="Name" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="blog-comment-style">
+                                <input type="tel" class="border-2" placeholder="Phone Number" name="Phone" id="Phone"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="blog-comment-style">
+                                <textarea placeholder="Message Here" class="border-2" name="Messege" id="Message"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="submit btn btn-primary btn-hover-dark" type="submit">SUBMIT NOW</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+
+{% endblock %}

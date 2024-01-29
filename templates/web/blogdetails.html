@@ -1,0 +1,92 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- breadcrumb area -->
+    <div class="breadcrumb-area breadcrumb-padding bg-img" style="background-image:url({% static 'web/images/bg/bg-2.jpg' %})">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2>Update Details</h2>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Update Details</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Project area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blog-details-wrap">
+                        <h1 class="title">{{update.title}}</h1>
+                        <div class="blog-details-img mb-4 mb-md-6">
+                            <img src="{{update.image.url}}" alt="" height="550px">
+                        </div>
+                        <div class="blog-details-meta">
+                            <ul>
+                                <li>{{update.date}} /</li>
+                                <li>{{update.service}}</li>
+                            </ul>
+                        </div>
+                        <p>{{update.description|safe}}</p>                      
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3">
+                    <div class="sidebar-wrap sidebar-margin-left">
+                        <div class="sidebar-widget search-wrap-2 mb-10">                          
+                        </div>
+                        <div class="sidebar-widget mb-10">
+                            <h3 class="sidebar-widget-title">Interior Post </h3>
+                            <div class="sidebar-blog-wrap">
+                                <div class="single-sidebar-blog">
+                                    <div class="sidebar-blog-img">
+                                        <a href="{% url 'blogdetails' update.id %}"><img src="{% static 'web/images/blog/sidebar-2.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="sidebar-blog-content">
+                                        <span class="category"><a href="#">Architecture</a></span>
+                                        <h4 class="title"><a href="{% url 'blogdetails' update.id %}">Architecture Design</a></h4>
+                                    </div>
+                                </div>
+                                <div class="single-sidebar-blog">
+                                    <div class="sidebar-blog-img">
+                                        <a href="{% url 'blogdetails' update.id %}"><img src="{% static 'web/images/blog/sidebar-1.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="sidebar-blog-content">
+                                        <span class="category"><a href="#">Interior</a></span>
+                                        <h4 class="title"><a href="{% url 'blogdetails' update.id %}">Home Interior Design</a></h4>
+                                    </div>
+                                </div>
+                                <div class="single-sidebar-blog">
+                                    <div class="sidebar-blog-img">
+                                        <a href="{% url 'blogdetails' update.id %}"><img src="{% static 'web/images/blog/sidebar-3.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="sidebar-blog-content">
+                                        <span class="category"><a href="#">Branding</a></span>
+                                        <h4 class="title"><a href="{% url 'blogdetails' update.id %}">Office Interior Design</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-widget">
+                            <h3 class="sidebar-widget-title">Categories </h3>
+                            <div class="sidebar-categori">
+                                <ul>
+                                    <li><a href="#">Interior <span>(09)</span></a></li>
+                                    <li><a href="#">Branding <span>(16)</span></a></li>
+                                    <li><a href="#">Interior <span>(10)</span></a></li>
+                                    <li><a href="#">Industrial <span>(07)</span></a></li>
+                                    <li><a href="#">Construction <span>(18)</span></a></li>
+                                    <li><a href="#">Architecture <span>(20)</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+    {% endblock %}

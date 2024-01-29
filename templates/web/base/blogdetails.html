@@ -1,0 +1,223 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- breadcrumb area -->
+    <div class="breadcrumb-area breadcrumb-padding bg-img" style="background-image:url({% static 'web/images/bg/bg-2.jpg' %})">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h2>Blog Details</h2>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Blog Details</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Project area -->
+    <div class="section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="blog-details-wrap">
+
+                    {% for bg in sect %}  
+                    <div class="blog-details-wrap">
+                        <div class="blog-details-img mb-4 mb-md-6">
+                            <img src="{{bg.image.url}}" alt="">
+                        </div>
+                        <div class="blog-details-meta">
+                            <ul>
+                                <li>{{bg.date}}</li>
+                                <li>{{bg.category}} </li>
+                            </ul>
+                        </div>
+                        <h1 class="title">{{bg.title}}.</h1>
+                        <p>{{bg.paragraph}} </p>
+                       
+                    </div>
+                    {% endfor %}
+                    
+                        <div class="tag-share">
+                            <div class="blog-details-tag">
+                                <span>Tags:</span>
+                                <ul>
+                                    <li><a href="#">Interior</a>,</li>
+                                    <li><a href="#">Building </a>,</li>
+                                    <li><a href="#">Architecture</a></li>
+                                </ul>
+                            </div>
+                            <div class="social-icon-style">
+                                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+                                <a class="behance" href="#"><i class="fa fa-behance"></i></a>
+                            </div>
+                        </div>
+                        <div class="blog-next-previous-post">
+                            <div class="blog-prev-post-wrap">
+                                <div class="blog-prev-post-icon">
+                                    <a href="{% url 'blogdetails' %}"><i class="fa fa-angle-left"></i> Previous</a>
+                                </div>
+                                <h3 class="title"><a href="{% url 'blogdetails' %}"> Focussed on designing new homes.</a></h3>
+                            </div>
+                            <div class="blog-next-post-wrap">
+                                <div class="blog-next-post-icon">
+                                    <a href="blog-details">Next <i class="fa fa-angle-right"></i> </a>
+                                </div>
+                                <h3 class="title"><a href="{% url 'blogdetails' %}">Suggest way to decoration work place.</a></h3>
+                            </div>
+                        </div>
+                        <div class="blog-comment-wrapper">
+                            <h4 class="blog-dec-title">Comments (02)</h4>
+                            <div class="single-comment-wrapper single-comment-border">
+                                <div class="blog-comment-img">
+                                    <img src="{% static 'web/images/blog/blog-comment-1.png' %}" alt="">
+                                </div>
+                                <div class="blog-comment-content">
+                                    <div class="comment-info-reply-wrap">
+                                        <div class="comment-info">
+                                            <span>October 14, 2020 </span>
+                                            <h4 class="name">Anthony Stephens</h4>
+                                        </div>
+                                        <div class="comment-reply">
+                                            <a class="comment-btn" href="#">Reply</a>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consecteg adipisicing elit sed do eius tempor incididunt ut lab et dolore magna aliqua. Ut enim ad minikl veniam, quis nostrud exercitatio. </p>
+                                </div>
+                            </div>
+                            <div class="single-comment-wrapper single-comment-ml">
+                                <div class="blog-comment-img">
+                                    <img src="{% static 'web/images/blog/blog-comment-2.png' %}" alt="">
+                                </div>
+                                <div class="blog-comment-content">
+                                    <div class="comment-info-reply-wrap">
+                                        <div class="comment-info">
+                                            <span>October 14, 2020 </span>
+                                            <h4 class="name">DX Joxova</h4>
+                                        </div>
+                                        <div class="comment-reply">
+                                            <a class="comment-btn" href="#">Reply</a>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodl tempor incididunt ut labore et dolore </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-comment-form-wrap">
+                            <h2 class="title">Leave a comment</h2>
+                            <div class="blog-comment-form">
+                                <form id="commentForm" action="{% url 'blogdetails' %}" target="_blank" method="POST">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="blog-comment-style">
+                                                <input type="text" placeholder="Name" name="name-leave">
+                                                <span id="nameError" class="error" style="color:red"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="blog-comment-style">
+                                                <input type="email" placeholder="Email" name="email-leave">
+                                                <span id="emailError" class="error" style="color:red"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="blog-comment-style">
+                                                <textarea placeholder="Comment" name="text-leave"></textarea>
+                                                <span id="commentError" class="error" style="color:red"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="submit btn btn-dark btn-hover-primary" type="submit">SUBMIT NOW</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                
+                                <script>
+                                    const form = document.getElementById('commentForm');
+                                    const nameInput = form.querySelector('[name="name-leave"]');
+                                    const emailInput = form.querySelector('[name="email-leave"]');
+                                    const commentInput = form.querySelector('[name="text-leave"]');
+                                
+                                    form.addEventListener('submit', function(event) {
+                                        let isValid = true;
+                                
+                                        if (nameInput.value.trim() === '') {
+                                            document.getElementById('nameError').textContent = 'Name is required';
+                                            isValid = false;
+                                        } else {
+                                            document.getElementById('nameError').textContent = '';
+                                        }
+                                
+                                        if (emailInput.value.trim() === '') {
+                                            document.getElementById('emailError').textContent = 'Email is required';
+                                            isValid = false;
+                                        } else {
+                                            document.getElementById('emailError').textContent = '';
+                                        }
+                                
+                                        if (commentInput.value.trim() === '') {
+                                            document.getElementById('commentError').textContent = 'Comment is required';
+                                            isValid = false;
+                                        } else {
+                                            document.getElementById('commentError').textContent = '';
+                                        }
+                                
+                                        if (!isValid) {
+                                            event.preventDefault();
+                                        }
+                                    });
+                                </script>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="sidebar-wrap sidebar-margin-left">
+                        <div class="sidebar-widget search-wrap-2 mb-10">
+                            <form action="#" method="GET">
+                                <input placeholder="Search" type="text" name="query">
+                                <button class="button-search-2"><i class="dlicon ui-1_zoom"></i></button>
+                            </form>
+                        </div>
+                        <div class="sidebar-widget mb-10">
+                            <h3 class="sidebar-widget-title">Recent Post </h3>
+                            <div class="sidebar-blog-wrap">
+                                {% for bg in tear %}
+                                <div class="single-sidebar-blog">
+                                    <div class="sidebar-blog-img">
+                                        <a href="{% url 'blogdetails' %}"><img src="{{bg.image.url}}" alt=""></a>
+                                    </div>
+                                    <div class="sidebar-blog-content">
+                                        <span class="category"><a href="#">{{bg.category}}</a></span>
+                                        <h4 class="title"><a href="{% url 'blogdetails' %}">{{bg.title}}</a></h4>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="sidebar-widget">
+                            <h3 class="sidebar-widget-title">Categories </h3>
+                            <div class="sidebar-categori">
+                                <ul>
+                                    <li><a href="#">Interior <span>(09)</span></a></li>
+                                    <li><a href="#">Branding <span>(16)</span></a></li>
+                                    <li><a href="#">Interior <span>(10)</span></a></li>
+                                    <li><a href="#">Industrial <span>(07)</span></a></li>
+                                    <li><a href="#">Construction <span>(18)</span></a></li>
+                                    <li><a href="#">Architecture <span>(20)</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
